@@ -1,0 +1,533 @@
+Public Class Vector
+
+    Const MAX = 100
+    Private v(MAX) As Integer
+    Private n As Integer
+    Public Sub vector()
+        n = 0
+    End Sub
+    Public Sub CargarRandomicamente(n1 As Integer, a As Integer, b As Integer)
+        Dim i As Integer
+        n = n1
+        For i = 1 To n
+            v(i) = a + Rnd() * (b - a)
+        Next
+    End Sub
+    Public Function Descargar() As String
+        Dim i As Integer
+        Dim s As String
+        s = ""
+        For i = 1 To n
+            s = s + Str(v(i)) + ";"
+        Next
+        s = Mid(s, 1, Len(s) - 1)
+        Return s
+    End Function
+    Public Sub Inter(p1 As Integer, p2 As Integer)
+        Dim a As Integer
+        a = v(p1)
+        v(p1) = v(p2)
+        v(p2) = a
+    End Sub
+    Public Sub OrdeInterc()
+        Dim p, i As Integer
+        For p = 1 To n - 1
+            For i = p + 1 To n
+                If v(i) < v(p) Then
+                    Inter(i, p)
+                End If
+            Next
+        Next
+    End Sub
+    Public Sub OrdeSelec()
+        Dim p, s, i As Integer
+        For p = 1 To n - 1
+            s = p
+            For i = p + 1 To n
+                If v(i) < v(s) Then
+                    s = i
+                End If
+            Next
+            If p <> s Then
+                Inter(s, p)
+            End If
+        Next
+    End Sub
+    Public Sub OrdeSelecMayor_a_Menor()
+        Dim p, s, i As Integer
+        For p = 1 To n - 1
+            s = p
+            For i = p + 1 To n
+                If v(i) > v(s) Then
+                    s = i
+                End If
+            Next
+            If p <> s Then
+                Inter(s, p)
+            End If
+        Next
+    End Sub
+    Public Function Media() As Double
+        Dim s, i As Integer
+        Dim m As Double
+        s = 0
+        For i = 1 To n
+
+            s = s + v(i)
+        Next
+        m = s / n
+        Return m
+    End Function
+    Public Function AcumularPrimos() As Double
+        Dim f As Double
+        Dim s1, s2, i, j As Double
+        Dim b As Boolean
+        Dim p As Nent
+        p = New Nent
+        f = 0 : j = 0 : b = True
+        For i = 1 To n
+            p.Cargar(v(i))
+            If p.Vprim() Then
+                j = j + 1
+                s1 = 10 + (j - 1) * (-2) : s2 = 2 + (j - 1) * 2
+                If b = True Then
+                    f = f + (Math.Sin(s1) / v(i) ^ (1 / s2))
+                Else
+                    f = f - (Math.Sin(s1) / v(i) ^ (1 / s2))
+
+                End If
+                b = Not b
+            End If
+        Next
+        Return f
+    End Function
+    Public Function ContarFibos() As Integer
+        Dim c, i As Integer
+        Dim fi As Nent
+        fi = New Nent
+        c = 0
+        For i = 1 To n
+            fi.Cargar(v(i))
+            If fi.Vfibo Then
+                c = c + 1
+            End If
+        Next
+        Return c
+    End Function
+    Public Function FrecuenciadeX(ele As Integer, m As Integer)
+        Dim c, i As Integer
+        c = 0
+        For i = 1 To n \ m
+            If v(i * m) = ele Then
+                c = c + 1
+            End If
+        Next
+        Return c
+    End Function
+    Public Function nuemrodePrimosEnX(x As Integer) As Integer
+        Dim i, c As Integer
+        Dim p As Nent
+        p = New Nent
+        c = 0
+        For i = 1 To n \ x
+            p.Cargar(v(i * x))
+            If p.Vprim Then
+                c = c + 1
+            End If
+        Next
+        Return c
+    End Function
+    Public Function verifOrdenDes() As Boolean
+        Dim b As Boolean
+        Dim i As Integer
+        i = 0 : b = True
+        While (i < n - 1) And (b = True)
+            i = i + 1
+            If Not (v(i) >= v(i + 1)) Then
+                b = False
+            End If
+        End While
+        Return b
+    End Function
+    Public Function verifTodosPRimos(m As Integer) As Boolean
+        Dim b As Boolean
+        Dim i As Integer
+        Dim p As Nent
+        p = New Nent
+        i = 0 : b = True
+        While (i < (n \ m)) And (b = True)
+            i = i + 1
+            p.Cargar(v(i * m))
+            If Not (p.Vprim) Then
+                b = False
+            End If
+        End While
+        Return b
+    End Function
+    Public Function VerifIntercParImp() As Boolean
+        Dim b, d As Boolean
+        Dim i As Integer
+        i = 0
+        b = True : d = True
+        While (i < n) And (b = True)
+            i = i + 1
+            If d Then
+                If Not (v(i) Mod 2 = 0) Then
+                    b = False
+                End If
+            Else
+                If v(i) Mod 2 = 0 Then
+                    b = False
+                End If
+            End If
+            d = Not d
+        End While
+        Return b
+    End Function
+    Public Function verifDiferentes() As Boolean
+        Dim i As Integer
+        Dim b As Boolean
+        b = True
+        OrdeSelec()
+        While (i < n - 1) And (b = True)
+            i = i + 1
+            If Not (v(i) <> v(i + 1)) Then
+                b = False
+            End If
+        End While
+        Return b
+    End Function
+    Public Function BuscadorSe(va As Integer) As Boolean
+        Dim b As Boolean
+        Dim i As Integer
+        i = 0 : b = False
+        While (i < n) And (b = False)
+            i = i + 1
+            If va = v(i) Then
+                b = True
+            End If
+        End While
+        Return b
+    End Function
+    Public Function VerifVectorInVector(vu As Vector) As Boolean
+        Dim i As Integer
+        Dim b As Boolean
+        i = 0 : b = True
+        For i = 1 To n
+            If Not (vu.BuscadorSe(v(i))) Then
+                b = False
+            End If
+        Next
+        Return b
+    End Function
+    Public Sub cargarpo1(n1 As Integer)
+        Dim i As Integer
+        n = n1
+        For i = 1 To n
+            v(i) = InputBox("cargar para posicion:" + Str(i), "Cargar un Valor del Vector", "")
+        Next
+
+
+    End Sub
+    Public Sub FrecDist(e As Vector, f As Vector)
+        Dim i, fr, ele As Integer
+        ordboubles()
+        i = 1 : e.n = 0 : f.n = 0
+        While i <= n
+            ele = v(i)
+            fr = 0
+            While (i <= n) And (v(i) = ele)
+                i = i + 1 : fr = fr + 1
+            End While
+            e.n = e.n + 1 : e.v(e.n) = ele
+            f.n = f.n + 1 : f.v(f.n) = fr
+        End While
+
+    End Sub
+    Public Sub ordboubles()
+        Dim t, i As Integer
+        For t = n To 2 Step -1
+            For i = 1 To t - 1
+                If v(i) > v(i + 1) Then
+                    Inter(i, i + 1)
+                End If
+            Next
+        Next
+    End Sub
+    Public Sub OrdenarSegmentoAyB(a As Integer, b As Integer)
+        Dim i, p As Integer
+        For p = a To b - 1
+            For i = p + 1 To b
+                If v(i) < v(p) Then
+                    Inter(i, p)
+                End If
+            Next
+        Next
+    End Sub
+    Public Sub elemento_Frecuencia_en_otro_vector(r As Vector)
+        Dim i, fr, ele As Integer
+        ordboubles()
+        r.n = 0
+        While i <= n
+            ele = v(i)
+            fr = 0
+            While (i <= n) And (v(i) = ele)
+                i = i + 1 : fr = fr + 1
+            End While
+            If fr > 1 Then
+                r.n = r.n + 1 : r.v(r.n) = ele
+            End If
+
+        End While
+        r.OrdeSelecMayor_a_Menor()
+    End Sub
+    Public Sub elmento_y_su_frecuencia(e As Vector)
+        Dim i, fr, ele As Integer
+        ordboubles()
+        i = 1 : e.n = 0
+        While i <= n
+            ele = v(i)
+            fr = 0
+            While (i <= n) And (v(i) = ele)
+                i = i + 1 : fr = fr + 1
+            End While
+            e.n = e.n + 1 : e.v(e.n) = ele
+            e.n = e.n + 1 : e.v(e.n) = fr
+        End While
+
+    End Sub
+    Public Sub ordenamiento_x_conteo(r As Vector)
+        Dim c As Vector
+        c = New Vector
+        Dim i, p As Integer
+        c.CargarRandomicamente(n, 1, 1)
+        For p = 1 To n - 1
+            For i = p + 1 To n
+                If v(p) > v(i) Then
+                    c.v(p) = c.v(p) + 1
+                Else
+                    c.v(i) = c.v(i) + 1
+                End If
+            Next
+        Next
+        For i = 1 To n
+            r.v(c.v(i)) = v(i)
+        Next
+        r.n = n
+    End Sub
+    Public Sub ordenamientoMayMe_x_conteo_retorna_contador(c As Vector)
+
+        Dim i, p As Integer
+        c.CargarRandomicamente(n, 1, 1)
+        For p = 1 To n - 1
+            For i = p + 1 To n
+                If v(p) < v(i) Then
+                    c.v(p) = c.v(p) + 1
+                Else
+                    c.v(i) = c.v(i) + 1
+                End If
+            Next
+        Next
+
+    End Sub
+    Public Sub ElemenFrecOrde(e As Vector, f As Vector)
+        Dim i, fr, ele As Integer
+        Dim c1, e1 As Vector
+        c1 = New Vector
+        e1 = New Vector
+        ordboubles()
+        i = 1 : e1.n = 0 : f.n = 0
+        While i <= n
+            ele = v(i)
+            fr = 0
+            While (i <= n) And (v(i) = ele)
+                i = i + 1 : fr = fr + 1
+            End While
+            e1.n = e1.n + 1 : e1.v(e1.n) = ele
+            f.n = f.n + 1 : f.v(f.n) = fr
+        End While
+        f.ordenamientoMayMe_x_conteo_retorna_contador(c1)
+        For i = 1 To f.n
+            e.v(c1.v(i)) = e1.v(i)
+        Next
+        f.OrdeSelecMayor_a_Menor()
+        e.n = e1.n
+    End Sub
+
+    Public Function PosiPrimoMenorSeg(a As Integer, b As Integer) As Integer
+        Dim p, i, pM As Integer
+        Dim d As Boolean
+        Dim ne As Nent
+        ne = New Nent
+        d = True : i = a : p = 0 : pM = 0
+        While (i <= b) And (d = True)
+            ne.Cargar(v(i))
+            If ne.Vprim Then
+                pM = i : d = False
+            Else
+                i = i + 1
+            End If
+        End While
+        d = True
+        While (i <= b) And (d = True)
+            ne.Cargar(v(i + 1))
+            If ne.Vprim Then
+                p = i + 1 : d = False
+                If v(p) < v(pM) Then
+                    pM = p
+                End If
+            Else
+                i = i + 1
+            End If
+
+        End While
+
+        Return pM
+    End Function
+    Public Function PosiNoPrimoMenorSeg(a As Integer, b As Integer) As Integer
+        Dim p, i, pM As Integer
+        Dim d As Boolean
+        Dim ne As Nent
+        ne = New Nent
+        d = True : i = a : p = 0 : pM = 0
+        While (i <= b) And (d = True)
+            ne.Cargar(v(i))
+            If Not (ne.Vprim) Then
+                pM = i : d = False
+            Else
+                i = i + 1
+            End If
+        End While
+        d = True
+        While (i <= b) And (d = True)
+            ne.Cargar(v(i + 1))
+            If Not (ne.Vprim) Then
+                p = i + 1 : d = False
+                If v(p) < v(pM) Then
+                    pM = p
+                End If
+            Else
+                i = i + 1
+            End If
+
+        End While
+
+        Return pM
+    End Function
+    Public Sub InserVect(v2 As Vector, po As Integer)
+        Dim i As Integer
+        For i = n + v2.n To v2.n Step -1
+            v(i) = v(i - v2.n)
+        Next
+        n = n + v2.n
+        For i = 1 To v2.n
+            v((po - 1) + i) = v2.v(i)
+        Next
+    End Sub
+    Public Sub EliminarElementosDeAB(a As Integer, b As Integer)
+        Dim i, c As Integer
+        c = 0
+        For i = a To n
+            c = c + 1
+            v(i) = v(b + c)
+        Next
+        n = n - ((b - a) + 1)
+    End Sub
+    Public Sub MovimientoCircular()
+        Dim i, va As Integer
+        va = v(n)
+        For i = n To 2 Step -1
+            v(i) = v(i - 1)
+        Next
+        v(1) = va
+    End Sub
+    Public Sub SegPrimosyNOprimos()
+        Dim i, d As Integer
+        Dim b As Boolean
+        Dim n1 As Nent
+        n1 = New Nent
+        i = 1 : d = n
+        While (i <= d)
+            b = True
+            While (i <= d) And (b = True)
+                n1.Cargar(v(i))
+                If n1.Vprim Then
+                    i = i + 1
+                Else
+                    b = False
+                End If
+            End While
+            b = True
+            While (i <= d) And (b = True)
+                n1.Cargar(v(d))
+                If Not (n1.Vprim) Then
+                    d = d - 1
+                Else
+                    b = False
+                End If
+            End While
+            If (i <= d) Then
+                Inter(i, d) : i = i + 1 : d = d - 1
+            End If
+        End While
+        OrdenarSegmentoAyB(1, d)
+        OrdenarSegmentoAyB(i, n)
+    End Sub
+    Public Function BUscPrim(a As Integer, b As Integer)
+        Dim i, p1 As Integer
+        Dim g As Boolean
+        Dim n1 As Nent
+        n1 = New Nent
+        g = True
+        While (i <= n) And (g = True)
+            i = i + 1
+            n1.Cargar(v(i))
+            If n1.Vprim Then
+                p1 = i : g = False
+            End If
+        End While
+        Return p1
+    End Function
+    Public Function BUscNoPrim(a As Integer, b As Integer)
+        Dim i, p1 As Integer
+        Dim g As Boolean
+        Dim n1 As Nent
+        n1 = New Nent
+        g = True
+        While (i <= n) And (g = True)
+            i = i + 1
+            n1.Cargar(v(i))
+            If Not (n1.Vprim) Then
+                p1 = i : g = False
+            End If
+        End While
+        Return p1
+    End Function
+    Public Sub IntercalarPrimosNoPrimos()
+        Dim p, p1, pm As Integer
+        Dim n1 As Nent
+        Dim b As Boolean
+        n1 = New Nent
+        b = True : p = 1
+        While p < n - 1
+
+            If b Then
+                p1 = BUscPrim(p, n)
+                If p1 > 0 Then
+                    pm = PosiPrimoMenorSeg(p1, n)
+                    Inter(p, pm)
+                    p = p + 1
+                End If
+            Else
+                p1 = BUscNoPrim(p, n)
+                If p1 > 0 Then
+                    pm = PosiNoPrimoMenorSeg(p1, n)
+                    Inter(p, pm)
+                    p = p + 1
+                End If
+            End If
+            b = Not b
+
+        End While
+    End Sub
+End Class

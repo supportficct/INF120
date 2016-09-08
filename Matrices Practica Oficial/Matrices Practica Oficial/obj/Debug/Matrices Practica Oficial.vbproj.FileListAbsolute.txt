@@ -1,0 +1,40 @@
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.exe.config
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.exe
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.pdb
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.xml
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\Matrices Practica Oficial\obj\Debug\Matrices_Practica_Oficial.Form1.resources
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\Matrices Practica Oficial\obj\Debug\Matrices_Practica_Oficial.Resources.resources
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.vbproj.GenerateResource.Cache
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.exe
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.xml
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.pdb
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\Matrices\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.exe.config
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\Matrices\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.exe
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\Matrices\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.xml
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\Matrices\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.pdb
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\Matrices\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.exe
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\Matrices\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.pdb
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\Matrices\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.xml
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\Matrices\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices_Practica_Oficial.Form1.resources
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\Matrices\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices_Practica_Oficial.Resources.resources
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\Matrices\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.vbproj.GenerateResource.Cache
+C:\Users\fito medina\Desktop\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.exe.config
+C:\Users\fito medina\Desktop\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.exe
+C:\Users\fito medina\Desktop\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.xml
+C:\Users\fito medina\Desktop\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.pdb
+C:\Users\fito medina\Desktop\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.exe
+C:\Users\fito medina\Desktop\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.pdb
+C:\Users\fito medina\Desktop\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.xml
+C:\Users\fito medina\Desktop\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices_Practica_Oficial.Form1.resources
+C:\Users\fito medina\Desktop\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices_Practica_Oficial.Resources.resources
+C:\Users\fito medina\Desktop\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.vbproj.GenerateResource.Cache
+C:\Users\fito medina\Desktop\vectores\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.exe.config
+C:\Users\fito medina\Desktop\vectores\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.exe
+C:\Users\fito medina\Desktop\vectores\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.xml
+C:\Users\fito medina\Desktop\vectores\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.pdb
+C:\Users\fito medina\Desktop\vectores\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.exe
+C:\Users\fito medina\Desktop\vectores\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.pdb
+C:\Users\fito medina\Desktop\vectores\Matrices Practica Oficial\Matrices Practica Oficial\bin\Debug\Matrices Practica Oficial.xml
+C:\Users\fito medina\Desktop\vectores\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices_Practica_Oficial.Form1.resources
+C:\Users\fito medina\Desktop\vectores\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices_Practica_Oficial.Resources.resources
+C:\Users\fito medina\Desktop\vectores\Matrices Practica Oficial\Matrices Practica Oficial\obj\Debug\Matrices Practica Oficial.vbproj.GenerateResource.Cache

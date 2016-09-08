@@ -1,0 +1,24 @@
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\examen parcial 1 programacion1\bin\Debug\examen parcial 1 programacion1.exe.config
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\examen parcial 1 programacion1\bin\Debug\examen parcial 1 programacion1.exe
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\examen parcial 1 programacion1\bin\Debug\examen parcial 1 programacion1.pdb
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\examen parcial 1 programacion1\bin\Debug\examen parcial 1 programacion1.xml
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\examen parcial 1 programacion1\obj\Debug\examen_parcial_1_programacion1.Form1.resources
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\examen parcial 1 programacion1\obj\Debug\examen_parcial_1_programacion1.Resources.resources
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\examen parcial 1 programacion1\obj\Debug\examen parcial 1 programacion1.vbproj.GenerateResource.Cache
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\examen parcial 1 programacion1\obj\Debug\examen parcial 1 programacion1.exe
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\examen parcial 1 programacion1\obj\Debug\examen parcial 1 programacion1.xml
+C:\Users\AndresContrerasO\AppData\Local\Temporary Projects\examen parcial 1 programacion1\obj\Debug\examen parcial 1 programacion1.pdb
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\EX\examen parcial 1 programacion1\examen parcial 1 programacion1\bin\Debug\examen parcial 1 programacion1.exe.config
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\EX\examen parcial 1 programacion1\examen parcial 1 programacion1\obj\Debug\examen parcial 1 programacion1.exe
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\EX\examen parcial 1 programacion1\examen parcial 1 programacion1\obj\Debug\examen parcial 1 programacion1.xml
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\EX\examen parcial 1 programacion1\examen parcial 1 programacion1\obj\Debug\examen parcial 1 programacion1.pdb
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\EX\examen parcial 1 programacion1\examen parcial 1 programacion1\bin\Debug\examen parcial 1 programacion1.exe
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\EX\examen parcial 1 programacion1\examen parcial 1 programacion1\bin\Debug\examen parcial 1 programacion1.pdb
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\EX\examen parcial 1 programacion1\examen parcial 1 programacion1\bin\Debug\examen parcial 1 programacion1.xml
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\EX\examen parcial 1 programacion1\examen parcial 1 programacion1\obj\Debug\examen_parcial_1_programacion1.Form1.resources
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\EX\examen parcial 1 programacion1\examen parcial 1 programacion1\obj\Debug\examen_parcial_1_programacion1.Resources.resources
+D:\Users\AndresContrerasO\Documents\andres contreras ojeda proyectos\EX\examen parcial 1 programacion1\examen parcial 1 programacion1\obj\Debug\examen parcial 1 programacion1.vbproj.GenerateResource.Cache
+G:\vectores\examen parcial 1 programacion1\examen parcial 1 programacion1\bin\Debug\examen parcial 1 programacion1.exe.config
+G:\vectores\examen parcial 1 programacion1\examen parcial 1 programacion1\obj\Debug\examen parcial 1 programacion1.exe
+G:\vectores\examen parcial 1 programacion1\examen parcial 1 programacion1\obj\Debug\examen parcial 1 programacion1.xml
+G:\vectores\examen parcial 1 programacion1\examen parcial 1 programacion1\obj\Debug\examen parcial 1 programacion1.pdb

@@ -1,0 +1,286 @@
+  Public Function VerEle(pf As Integer, pc As Integer)
+        Return x(pf, pc)
+    End Function
+
+    Public Function Descargar()
+        Dim s As String
+        Dim fi, ci As Integer
+        s = ""
+        For fi = 1 To f
+            For ci = 1 To c
+
+                s = s + Str(x(fi, ci)) + " "
+            Next
+            s = s + Chr(13) + Chr(10)
+        Next
+        Return s
+    End Function
+    Public Sub SumaMatrices(x1 As Matriz, x2 As Matriz)
+        Dim fi, ci As Integer
+        For fi = 1 To f
+            For ci = 1 To c
+                x2.x(fi, ci) = x(fi, ci) + x1.x(fi, ci)
+            Next
+        Next
+        x2.f = f : x2.c = c
+    End Sub
+    Public Function verifOrden()
+        Dim fi, ci, aux As Integer
+        Dim b As Boolean
+        Dim s As String
+        s = ""
+        b = True : aux = x(1, 1) : fi = 1
+        While (fi <= f) And (b = True)
+            ci = 1
+            While (ci <= c) And (b = True)
+                If Not (x(fi, ci) >= aux) Then
+                    b = False
+                Else
+                    aux = x(fi, ci)
+                End If
+                ci = ci + 1
+            End While
+            fi = fi + 1
+        End While
+        If b Then
+            s = "SI está Ordenado"
+        Else
+            s = "NO está Ordenado"
+        End If
+        Return s
+    End Function
+    Public Function AcumularConPrimos()
+        Dim fi, ci As Integer
+        Dim AUX As Double
+        Dim b As Boolean
+        Dim n1 As NEnt
+        n1 = New NEnt
+        b = True
+        For fi = f To 1 Step -1
+            For ci = c To 1 Step -1
+                n1.Cargar(x(fi, ci))
+                If n1.Vprim Then
+                    If b Then
+                        AUX = AUX - Math.Sqrt(x(fi, ci))
+                    Else
+                        AUX = AUX + Math.Sqrt(x(fi, ci))
+                    End If
+                    b = Not b
+                End If
+            Next
+        Next
+        Return AUX
+    End Function
+    Public Function BuscarElementoMayor()
+        Dim fi, ci, may, a, b As Integer
+        Dim s As String
+        may = x(1, 1) : a = 1 : b = 1
+        For fi = 1 To f
+            For ci = 1 To c
+                If may < x(fi, ci) Then
+                    may = x(fi, ci) : a = fi : b = ci
+                End If
+            Next
+        Next
+        s = "Fila :" + Str(a) + Chr(13) + Chr(10) + "Columna :" + Str(b)
+        Return s
+    End Function
+    Public Function FrecuenciaDeElementoEnUnRango(ele As Integer, fi As Integer, ci As Integer, ff As Integer, cf As Integer)
+        Dim f1, c1, fr As Integer
+        fr = 0
+        For f1 = fi To ff
+            For c1 = ci To cf
+                If ele = x(f1, c1) Then
+                    fr = fr + 1
+                End If
+            Next
+        Next
+        Return fr
+    End Function
+    Public Function EncontrarElmentoDeMayorFrecuenciaDeUNRango(fi As Integer, ci As Integer, ff As Integer, cf As Integer)
+        Dim f1, c1, ele, fr, Mfr As Integer
+        Mfr = 0 : fr = 0
+        For f1 = fi To ff
+            For c1 = ci To cf
+                fr = FrecuenciaDeElementoEnUnRango(x(f1, c1), fi, ci, ff, cf)
+                If Mfr < fr Then
+                    ele = x(f1, c1) : Mfr = fr
+                End If
+            Next
+        Next
+        Return ele
+    End Function
+    Public Sub Inter(f1 As Integer, c1 As Integer, f2 As Integer, c2 As Integer)
+        Dim aux As Integer
+        aux = x(f1, c1)
+        x(f1, c1) = x(f2, c2)
+        x(f2, c2) = aux
+    End Sub
+    Public Sub OrdenarFilasAsendentemente()
+        Dim fi, ci, cd As Integer
+        For fi = 1 To f
+            For ci = 1 To c
+                For cd = ci To c
+                    If x(fi, cd) < x(fi, ci) Then
+                        Inter(fi, cd, fi, ci)
+                    End If
+                Next
+            Next
+        Next
+    End Sub
+    Public Function VerifOrdenDesendente()
+        Dim fi, ci, aux As Integer
+        Dim b As Boolean
+        Dim s As String
+        b = True : fi = 1 : s = ""
+        aux = x(1, 1)
+        While (fi <= f) And (b = True)
+            ci = 1
+            While (ci <= c) And (b = True)
+                If aux >= x(fi, ci) Then
+                    aux = x(fi, ci)
+                Else
+                    b = False
+                End If
+                ci = ci + 1
+            End While
+            fi = fi + 1
+        End While
+        If b Then
+            s = "SI está Ordenado"
+        Else
+            s = "NO está Ordenado"
+        End If
+        Return s
+    End Function
+    Public Function VerifEle(ele As Integer)
+        Dim fi, ci As Integer
+        Dim b As Boolean
+        b = False : fi = 1
+        While (fi <= f) And (b = False)
+            ci = 1
+            While (ci <= c) And (b = False)
+                If ele = x(fi, ci) Then
+                    b = True
+                End If
+                ci = ci + 1
+            End While
+            fi = fi + 1
+        End While
+        Return b
+    End Function
+
+    Public Sub segmentarParImpar()
+        Dim fp, cp, fd, cd, i As Integer
+
+        For fp = 1 To f
+            For cp = 1 To c
+                For fd = fp To f
+                    If fd = fp Then
+                        i = cp
+                    Else
+                        i = 1
+                    End If
+                    For cd = i To c
+                        If (Not (x(fp, cp) Mod 2 = 0) And (x(fd, cd) Mod 2 = 0)) Or ((x(fp, cp) Mod 2 = 0) And (x(fd, cd) Mod 2 = 0) And (x(fd, cd) < x(fp, cp))) Or (Not (x(fp, cp) Mod 2 = 0) And Not (x(fd, cd) Mod 2 = 0) And (x(fd, cd) < x(fp, cp))) Then
+                            Inter(fd, cd, fp, cp)
+                        End If
+                    Next
+                Next
+            Next
+        Next
+    End Sub
+    Public Function VerificarSiMatrizEstaIncluidaEnOtra(x2 As Matriz)
+        Dim fi, ci As Integer
+        Dim b As Boolean
+        b = True : fi = 1
+        While (fi <= f) And (b = True)
+            ci = 10
+            While (ci <= c) And (b = True)
+                If Not (x2.VerifEle(x(fi, ci))) Then
+                    b = False
+                End If
+                ci = ci + 1
+            End While
+            fi = fi + 1
+        End While
+        Return b
+    End Function
+    Public Sub IntercalarParImpar()
+        Dim fp, cp, fd, cd, i As Integer
+        Dim b As Boolean
+        b = True
+        For fp = 1 To f
+            For cp = 1 To c
+                If b Then
+                    For fd = fp To f
+                        If fd = fp Then
+                            i = cp
+                        Else
+                            i = 1
+                        End If
+                        For cd = i To c
+                            If (Not (x(fp, cp) Mod 2 = 0) And (x(fd, cd) Mod 2 = 0)) Or ((x(fp, cp) Mod 2 = 0) And (x(fd, cd) Mod 2 = 0) And (x(fd, cd) < x(fp, cp))) Or (Not (x(fp, cp) Mod 2 = 0) And (Not (x(fd, cd) Mod 2 = 0)) And (x(fd, cd) < x(fp, cp))) Then
+                                Inter(fd, cd, fp, cp)
+                            End If
+                        Next
+                    Next
+                Else
+                    For fd = fp To f
+                        If fd = fp Then
+                            i = cp
+                        Else
+                            i = 1
+                        End If
+                        For cd = i To c
+                            If ((x(fp, cp) Mod 2 = 0) And Not (x(fd, cd) Mod 2 = 0)) Or (Not (x(fp, cp) Mod 2 = 0) And Not (x(fd, cd) Mod 2 = 0) And (x(fd, cd) < x(fp, cp))) Or ((x(fp, cp) Mod 2 = 0) And (x(fd, cd) Mod 2 = 0) And (x(fd, cd) < x(fp, cp))) Then
+                                Inter(fd, cd, fp, cp)
+                            End If
+                        Next
+                    Next
+
+                End If
+                b = Not b
+            Next
+        Next
+    End Sub
+    Public Sub MayorFrecFilas()
+        Dim fi As Integer
+        For fi = 1 To f
+            x(fi, c + 1) = EncontrarElmentoDeMayorFrecuenciaDeUNRango(fi, 1, fi, c)
+        Next
+        c = c + 1
+    End Sub
+    Public Sub EleiminarColumna(col As Integer)
+        Dim fi, ci As Integer
+        For ci = col To c
+            For fi = 1 To f
+                x(fi, ci) = x(fi, ci + 1)
+            Next
+        Next
+        c = c - 1
+    End Sub
+    Public Sub EliminarFila(fil As Integer)
+        Dim fi, ci As Integer
+        For fi = fil To f
+            For ci = 1 To c
+                x(fi, ci) = x(fi + 1, ci)
+            Next
+        Next
+        f = f - 1
+    End Sub
+    Public Sub segmentarFilaParImpar()
+        Dim fp, cp, cd As Integer
+
+        For fp = 1 To f
+            For cp = 1 To c
+                For cd = cp To c
+                    If (Not (x(fp, cp) Mod 2 = 0) And (x(fp, cd) Mod 2 = 0)) Or ((x(fp, cp) Mod 2 = 0) And (x(fp, cd) Mod 2 = 0) And (x(fp, cd) < x(fp, cp))) Or (Not (x(fp, cp) Mod 2 = 0) And Not (x(fp, cd) Mod 2 = 0) And (x(fp, cd) < x(fp, cp))) Then
+                        Inter(fp, cd, fp, cp)
+                    End If
+                Next
+
+            Next
+        Next
+
+    End Sub
