@@ -1,0 +1,29 @@
+INSTRUCCIONES DE CADENAS
+-StrToInt(cad):integer
+ Devuelve el numero contenido en la cad
+-IntToStr(n):string
+ Devuelve la longitud de cad
+-Length(cad):integer
+ Devuelve una subcadena de cad, la comprendida desde p,n caracteres
+-Delete(cad,p,n)
+ Proceso que elimina n caracteres de la cadena cad, desde la  posicion p
+-Insert(sub,cad,p)
+ Proceso que inserta la cadena sub dentro de la cadena
+ cad en la posicion p
+-Pos (sub,cad):integer
+ Funcion que devuelve la posicion de la cadena sub dentro de la cad
+-Cad[p]
+ Devuelve el carácter p de la cadena cad
+-Upcase(c):char
+ Devuelve la mayúscula de carácter c(si es una letra)
+-Uppercase(cad):string
+ Funcion que devuelve cad en mayúscula
+-Lowercase(cad):string
+ Funcion que devuelve cad en minúsculas
+-Trim(cad):string
+ Elimina los espacios al inicio y al final de la cad
+-Trimleft(cad):string
+ Elimina los espacios en blanco del inicio de la cadena cad
+-Trimright(cad):string
+ Elimina los espacios en blanco al final de la cadena cad 
+ 
